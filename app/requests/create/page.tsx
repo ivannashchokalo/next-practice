@@ -1,5 +1,10 @@
 import CreateRequestForm from "@/components/CreateRequestForm/CreateRequestForm";
 
 export default function CreateRequest() {
-  return <CreateRequestForm />;
+  return (
+    <>
+      <h1>Create</h1>
+      <CreateRequestForm />
+    </>
+  );
 }

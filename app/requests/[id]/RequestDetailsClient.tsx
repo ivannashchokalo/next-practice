@@ -27,6 +27,7 @@ export default function RequestDetailsClient() {
 
   return (
     <>
+      <button onClick={() => router.back()}>Back</button>
       {isLoading && <p>Loading, please wait...</p>}
       {isError && <p>Something went wrong.</p>}
       {data && (

@@ -1,7 +1,7 @@
 "use client";
 
 import { RequestItem } from "@/types/request";
-import RequestCard from "./RequestCard";
+import RequestCard from "../RequestCard/RequestCard";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { deleteRequest } from "@/lib/api/requests";
 
@@ -25,7 +25,7 @@ export default function RequestsList({
     mutate(id);
   };
   return (
-    <ul>
+    <ul style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
       {requests.map((request) => (
         <RequestCard key={request.id} request={request} onDelete={deleteCard} />
       ))}
